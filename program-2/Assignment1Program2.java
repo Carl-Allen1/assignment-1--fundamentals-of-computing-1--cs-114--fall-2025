@@ -32,6 +32,8 @@ public class Assignment1Program2 {
       remainingValue = numToConvert % (int)Math.pow(base, i);
     }
 
-    System.out.println(convertedNumString);
+    System.out.println(numToConvert + " (base 10) = " + convertedNumString + " (base " + base + ")");
+
+    input.close();
   }
 }
