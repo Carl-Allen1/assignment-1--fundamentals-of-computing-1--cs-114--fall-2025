@@ -16,6 +16,7 @@ public class Assignment1Program2 {
       max4DigitNum += maxPerDigit * Math.pow(base, i);
     }
       
-    System.out.println((int)max4DigitNum);
+    System.out.println("Now, enter a base 10 number in range 0 to " + (int)max4DigitNum + " to convert: ");
+    int numToConvert = input.nextInt();
   }
 }
