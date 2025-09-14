@@ -32,7 +32,9 @@ public class Assignment1Program1 {
     Random randGenerator = new Random();
     int randNum = randGenerator.nextInt((16384 - 32) + 1) + 32;
 
-    System.out.println(randNum);
+    System.out.println("Random number generated. Continuing...");
+
+    System.out.println("Your new string is " + tempInCelsius + finalString + randNum);
 
     input.close();
   }
