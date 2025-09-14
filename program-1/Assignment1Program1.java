@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Assignment1Program1 {
   public static void main(String[] args) {
@@ -28,7 +29,10 @@ public class Assignment1Program1 {
 
     double tempInCelsius = ((double)tempInFahrenheit - 32.0) * (5.0 / 9.0);
 
-    System.out.println(tempInCelsius);
+    Random randGenerator = new Random();
+    int randNum = randGenerator.nextInt((16384 - 32) + 1) + 32;
+
+    System.out.println(randNum);
 
     input.close();
   }
