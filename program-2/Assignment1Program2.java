@@ -8,5 +8,14 @@ public class Assignment1Program2 {
 
     System.out.println("Please enter a base (2-9)");
     int base = input.nextInt();
+
+    int maxPerDigit = base - 1;
+    double max4DigitNum = 0;
+
+    for(int i = 3; i >= 0; i--) {
+      max4DigitNum += maxPerDigit * Math.pow(base, i);
+    }
+      
+    System.out.println((int)max4DigitNum);
   }
 }
