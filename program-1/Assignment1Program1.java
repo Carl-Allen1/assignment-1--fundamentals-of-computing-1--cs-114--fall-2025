@@ -23,7 +23,12 @@ public class Assignment1Program1 {
     StringBuilder stringBuilder = new StringBuilder(clippedString);
     String finalString = stringBuilder.reverse().toString();
 
-    System.out.println(finalString);
+    System.out.println("Please enter a number in Fahrenheit: ");
+    int tempInFahrenheit = input.nextInt();
+
+    double tempInCelsius = ((double)tempInFahrenheit - 32.0) * (5.0 / 9.0);
+
+    System.out.println(tempInCelsius);
 
     input.close();
   }
