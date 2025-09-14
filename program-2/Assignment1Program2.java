@@ -10,13 +10,28 @@ public class Assignment1Program2 {
     int base = input.nextInt();
 
     int maxPerDigit = base - 1;
-    double max4DigitNum = 0;
+    int max4DigitNum = 0;
 
     for(int i = 3; i >= 0; i--) {
       max4DigitNum += maxPerDigit * Math.pow(base, i);
     }
-      
-    System.out.println("Now, enter a base 10 number in range 0 to " + (int)max4DigitNum + " to convert: ");
+    
+    System.out.println("The maximum, 4 digit, base 10 number in base " + base + " is " + max4DigitNum);
+    System.out.println("Now, enter a base 10 number in range 0 to " + max4DigitNum + " to convert: ");
     int numToConvert = input.nextInt();
+
+    int remainingValue = numToConvert;
+
+    String convertedNumString = "";
+
+    for(int i = 3; i >= 0; i--) {
+      int placeValue = remainingValue / (int)Math.pow(base, i);
+
+      convertedNumString = convertedNumString + placeValue;
+
+      remainingValue = numToConvert % (int)Math.pow(base, i);
+    }
+
+    System.out.println(convertedNumString);
   }
 }
